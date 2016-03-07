@@ -4,16 +4,16 @@ except ImportError:
     from distutils.core import setup
 
 config = {
-    'description': 'PyLambda 2',
+    'description': 'PyLambda Skeleton',
     'author': 'Manuel Guerrero',
-    'url': 'http://sfdc.ninja',
-    'download_url': 'http://sfdc.ninja/pylambda2',
+    'url': '',
+    'download_url': '',
     'author_email': 'amguerrero@gmail.com',
     'version': '0.1',
-    'install_requires': ['nose'],
-    'packages': ['lambda1'],
+    'install_requires': [],
+    'packages': ['lambda'],
     'scripts': [],
-    'name': 'py_lambda2'
+    'name': 'py_aws_lambda_skeleton'
 }
 
 setup(**config)
