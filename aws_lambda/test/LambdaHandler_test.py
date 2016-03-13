@@ -10,4 +10,5 @@ class LambdaHandler_test(unittest.TestCase):
 
     def test_Returns_Request(self):
         victim = LambdaHandler()
-        victim.handle(None, None)
+        result = victim.handle(None, None)
+        self.assertEqual(result, "I'm a Lambda!", 'Expected other value...')

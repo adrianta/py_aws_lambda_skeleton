@@ -3,4 +3,4 @@ class LambdaHandler():
         pass
 
     def handle(self, event, context):
-        return ""
+        return "I'm a Lambda!"

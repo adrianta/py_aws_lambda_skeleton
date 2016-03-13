@@ -11,7 +11,7 @@ config = {
     'author_email': 'amguerrero@gmail.com',
     'version': '0.1',
     'install_requires': [],
-    'packages': ['lambda'],
+    'packages': ['aws_lambda'],
     'scripts': [],
     'name': 'py_aws_lambda_skeleton'
 }
