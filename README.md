@@ -17,6 +17,18 @@ The **test/** directory contains all the tests for the lambda handler and the he
 This is the entry point for the AWS Lambda function.
 When configuring the AWS Lambda function the 'Handler' should be  `lambda.handler`. This script imports the lambda handler class, i.e. `from main.LambdaHandler import LambdaHandler`.
 
+## Considerations During Development and Preparing Deployment
+* If during the development of the lambda or the tests there is the need of installing 3rd party modules, these modules should be installed inside the **modules/** subdirectory of **main/** or **test/** directories. And then they should be imported from the package **modules**, i.e:
+**Install `requests` the module in *modules/*:**
+```
+$ pip install requests -t aws_lambda/main/modules
+```
+**Import `requests` in *LambdaHandler.py*:**
+```
+from modules.requests import request
+```
+* To prepare the zip file, we just need to zip the `lambda.py` and the `modules/` directory keeping the relative structure.
+
 ## Running The Tests
 In order to run the tests we just need to run the following command from the root of the project:
 ```
